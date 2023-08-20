@@ -109,7 +109,7 @@ for level in levels:
     plt.show()
 
 
-#Top 20 Most Popular Courses by Number of Subscribers: Paid vs Free
+#Top 20 Courses with the highest Number of Subscribers: Paid vs Free
 top_20_subscribers = udemy.nlargest(20,'num_subscribers')
 plt.figure(figsize=(8, 6))
 # Plotting paid courses
@@ -131,7 +131,7 @@ plt.show()
 
 
 
-# Assuming you have a DataFrame 'udemy' with relevant data
+#Top 20 Courses with Highest Number of Reviews: Paid vs Free
 top_20_reviews = udemy.nlargest(20, 'num_reviews')
 
 plt.figure(figsize=(10, 6))
@@ -231,7 +231,7 @@ y = udemy["is_paid"]
 # Split the data into training and testing sets
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
 
-# Initialize and train multiple classification models
+# Initialize and train logistic regression model
 
 model = LogisticRegression()
 model.fit(x_train,y_train)
@@ -253,7 +253,7 @@ plt.ylabel("True Labels")
 plt.title("Confusion Matrix")
 plt.show()
 
-# Assuming y_true contains the true class labels and y_pred contains the predicted class labels
+# calculating precision, recall, and f1 score
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 f1 = f1_score(y_test, y_pred)
