@@ -20,13 +20,14 @@ This project involves the exploration and classification of a dataset containing
 The primary objective is to gain insights into various course attributes and create a classification model to predict whether a course is paid or free.
 
 # Installation
-o run this project, you'll need the following dependencies:
+To run this project, you'll need the following dependencies:
 
 NumPy
 Pandas
 Scikit-learn
 Matplotlib
 Seaborn
+
 You can install these dependencies using the following command:
 pip install numpy pandas scikit-learn matplotlib seaborn
 
